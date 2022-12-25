@@ -10,18 +10,15 @@ import '@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Burnable.sol';
 import '@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Pausable.sol';
 import '@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol';
 
-interface IXclusive1155 {
-  event Xclusive1155Transfer(address indexed from, address indexed to, uint256 indexed id, uint256 amount, uint256 offchainId);
-}
-
-contract Xclusive1155 is
+contract Custom1155 is
   Context,
   AccessControlEnumerable,
   ERC1155Burnable,
   ERC1155Pausable,
-  Ownable,
-  IXclusive1155
+  Ownable
 {
+  event Custom1155Transfer(address indexed from, address indexed to, uint256 indexed id, uint256 amount, uint256 offchainId);
+
   bytes32 public constant MINTER_ROLE = keccak256('MINTER_ROLE');
   bytes32 public constant PAUSER_ROLE = keccak256('PAUSER_ROLE');
 
@@ -68,7 +65,7 @@ contract Xclusive1155 is
     require(hasRole(MINTER_ROLE, _msgSender()), 'ERC1155PresetMinterPauser: must have minter role to mint');
 
     _mint(to, id, amount, data);
-    emit Xclusive1155Transfer(address(0), to, id, amount, offchainId);
+    emit Custom1155Transfer(address(0), to, id, amount, offchainId);
   }
 
   function mintBatch(

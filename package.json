@@ -4,7 +4,10 @@
   "description": "NFT marketplace created by supplementing the shortcomings of OpenSea's wyvern",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "hardhat compile",
+    "test:token-721": "hardhat test test/custom721.test.ts",
+    "test:token-1155": "hardhat test test/custom1155.test.ts",
+    "test:integration": "hardhat test"
   },
   "repository": {
     "type": "git",
