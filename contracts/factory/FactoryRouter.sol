@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.17;
 
-import './IFactoryOf721.sol';
-import './IFactoryOf1155.sol';
-import './IFactoryRouter.sol';
+import './interfaces/IFactoryOf721.sol';
+import './interfaces/IFactoryOf1155.sol';
+import './interfaces/IFactoryRouter.sol';
 
 contract FactoryRouter is IFactoryRouter {
   address public _factoryOf721;
