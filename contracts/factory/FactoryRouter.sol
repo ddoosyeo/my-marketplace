@@ -18,7 +18,7 @@ contract FactoryRouter is IFactoryRouter {
     string memory name,
     string memory symbol,
     string memory baseTokenURI,
-    string memory contractURI_,
+    string memory contractURI,
     address creator,
     address minter,
     address admin
@@ -27,7 +27,7 @@ contract FactoryRouter is IFactoryRouter {
       name,
       symbol,
       baseTokenURI,
-      contractURI_,
+      contractURI,
       creator,
       minter,
       admin
