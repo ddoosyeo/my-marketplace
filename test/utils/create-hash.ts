@@ -126,7 +126,7 @@ export const create1155OfferOrder = (param: Create1155OfferOrderType) => {
     royalty: 1000,
     price: ethers.utils.parseEther('1'),
     offerExpireTimestamp: Math.round(new Date('2022-12-01T09:00:00.000Z').getTime() / 1000),
-    wallet: 2
+    wallet: 0
   }
 }
 
@@ -136,7 +136,7 @@ export const create721OfferOrder = (param: Create721OfferOrderType) => {
     royalty: 1000,
     price: ethers.utils.parseEther('1'),
     offerExpireTimestamp: Math.round(new Date('2022-12-01T09:00:00.000Z').getTime() / 1000),
-    wallet: 2
+    wallet: 0
   };
 }
 
@@ -176,14 +176,13 @@ export const create721Order = (param: Create721OrderType) => {
     ...param,
     royalty: 1000,
     price: ethers.utils.parseEther('1'),
-    saleExpireTimestamp: Math.round(new Date('2022-12-01T09:00:00.000Z').getTime() / 1000),
+    saleExpireTimestamp: Math.round(new Date('2023-12-01T09:00:00.000Z').getTime() / 1000),
     saleUniqueId: ethers.utils.formatBytes32String('1234'),
-    wallet: 2
+    wallet: 0
   }
 }
 
 export const create721Hash = (order: ERC721Order) => {
-  console.log(order);
   const tokenIdsToObject = order.tokenIds.map((tokenId) => (
     { type: 'uint', value: `${tokenId}` }
   ));
@@ -208,9 +207,9 @@ export const create1155Order = (param: Create1155OrderType) => {
     ...param,
     royalty: 1000,
     piecePrice: ethers.utils.parseEther('1'),
-    saleExpireTimestamp: Math.round(new Date('2022-12-01T09:00:00.000Z').getTime() / 1000),
+    saleExpireTimestamp: Math.round(new Date('2023-12-01T09:00:00.000Z').getTime() / 1000),
     saleUniqueId: ethers.utils.formatBytes32String('1234'),
-    wallet: 2
+    wallet: 0
   }
 }
 
@@ -219,9 +218,9 @@ export const create1155BundleOrder = (param: Create1155BundleOrderType) => {
     ...param,
     royalty: 1000,
     bundlePrice: ethers.utils.parseEther('1'),
-    saleExpireTimestamp: Math.round(new Date('2022-12-01T09:00:00.000Z').getTime() / 1000),
+    saleExpireTimestamp: Math.round(new Date('2023-12-01T09:00:00.000Z').getTime() / 1000),
     saleUniqueId: ethers.utils.formatBytes32String('1234'),
-    wallet: 2
+    wallet: 0
   }
 }
 

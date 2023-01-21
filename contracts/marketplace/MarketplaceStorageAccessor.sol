@@ -61,8 +61,7 @@ contract MarketplaceStorageAccessor is Ownable, MarketplaceStorage {
   function setSignPrefix(Wallet wallet, string calldata prefix) public onlyOwner {
     require(
       wallet == Wallet.KAIKAS ||
-      wallet == Wallet.METAMASK ||
-      wallet == Wallet.FAVORLET,
+      wallet == Wallet.METAMASK,
       'MarketplaceStorageAccessor: wallet is required'
     );
     require(bytes(prefix).length > 0, 'MarketplaceStorageAccessor: wallet is required');
