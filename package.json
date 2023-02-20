@@ -24,7 +24,12 @@
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-web3": "^2.0.0",
     "@openzeppelin/contracts": "^4.8.0",
+    "@types/inquirer": "^8.2.6",
+    "dotenv": "^16.0.3",
+    "env-var": "^7.3.0",
     "hardhat": "^2.12.4",
+    "hardhat-deploy": "^0.11.23",
+    "inquirer": "^9.1.4",
     "solhint": "^3.3.7"
   }
 }
